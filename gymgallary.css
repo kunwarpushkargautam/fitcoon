@@ -1,0 +1,12 @@
+.card{
+    width: 18rem;
+    margin: 2rem;
+}
+
+@media(max-width: 920px){
+    html{
+        font-size: 60%;
+    }
+    .card{
+        margin: 0.5rem;
+    }
