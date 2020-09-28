@@ -432,8 +432,8 @@ nav ul li a:hover,a#services:hover {
 
 .card-profile {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 6.5rem;
+  height: 6.5rem;
   position: absolute;
   top: 23%;
   left: 35%;
