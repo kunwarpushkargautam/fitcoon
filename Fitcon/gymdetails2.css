@@ -153,6 +153,46 @@
  
   
 }
+#membershipPlan {
+  text-align: center;
+}
+#membershipPlan div {
+  display: inline-block;
+  width: 15rem;
+  margin: 1rem;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#membershipPlan div:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+#membershipPlan div h1 {
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+#membershipPlan div p {
+  color: rgba(0, 0, 0, 0.7);
+}
+#membershipPlan div button {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  margin: 2rem auto;
+  padding: 0.4rem 1rem;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#membershipPlan div button:hover {
+  background-color: blue;
+  color: white;
+}
 
 .dash-options {
   
@@ -201,6 +241,12 @@
   margin: 1.5rem 0rem;
 }
 
+.top .gym-address .address-email p{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .usercontrol {
   background-color: rgb(255, 255, 255);
 }
@@ -227,8 +273,59 @@
 }
 hr {
   background-color: none;
-  padding: 0px;
+  padding: 5px;
   margin: 0px;
+}
+#services {
+  top: 2rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: larger;
+  /* background-color: #000000cc; */
+}
+#services .serviceCard {
+  margin: 0.5rem;
+  width: 14rem;
+  display: inline-block;
+  padding: 2rem 1rem;
+  font-weight: bolder;
+  color: black;
+  height: 10rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  box-shadow: 2px 2px 10px black;
+}
+#services .serviceCard h2 {
+  position: absolute;
+  padding:1rem 0rem ;
+  font-size: 3.5rem;
+}
+#location {
+  text-align: center;
+  margin: 1rem;
+}
+#location img {
+  width: 60%;
+  height: 20rem;
+  margin-right: auto;
+}
+#check-map{
+  color: rgb(4, 174, 253);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 10px black;
+  border-radius: 50px;
+  padding: 2px 4px;
+}
+#check-map:hover{
+  color: rgb(4, 174, 253);
+  background-color: rgb(36, 32, 252);
+  
+}
+.gym-address a{
+  text-decoration: none;
 }
  
 
@@ -322,6 +419,32 @@ hr {
 
   
 }
+
+#membershipPlan div {
+  width: 12rem;
+  
+}
+
+html #membershipPlan div {
+  font-size: 0.8rem;
+}
+
+#services .serviceCard {
+  margin: 0.5rem;
+  width: 8rem;
+  
+  padding: 2rem 1rem;
+ 
+  height: 8rem;
+  
+}
+#services .serviceCard h2 {
+  position: absolute;
+  padding:1rem 0rem ;
+  font-size: 2rem;
+}
+
+
   .gymdetails-cover {
     height: 70%;
     position: relative;

@@ -629,61 +629,9 @@ Address .city {
 }
 
 /* services section */
-#services {
-  text-align: center;
-  color: white;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#services .serviceCard {
-  margin: 0.5rem;
-  width: 5rem;
-  display: inline-block;
-  padding: 2rem 1rem;
-  font-weight: bolder;
-  color: black;
-}
 
-#membershipPlan {
-  text-align: center;
-}
-#membershipPlan div {
-  display: inline-block;
-  width: 15rem;
-  margin: 1rem;
-  border-bottom-right-radius: 15px;
-  border-top-left-radius: 15px;
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-}
-#membershipPlan div:hover {
-  transform: scale(1.1);
-  opacity: 0.7;
-}
-#membershipPlan div h1 {
-  margin-bottom: 0;
-  color: white;
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
-}
-#membershipPlan div p {
-  color: rgba(0, 0, 0, 0.7);
-}
-#membershipPlan div button {
-  background-color: transparent;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: bold;
-  margin: 2rem auto;
-  padding: 0.4rem 1rem;
-  border: 2px solid white;
-  border-radius: 15px;
-  cursor: pointer;
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-}
-#membershipPlan div button:hover {
-  background-color: blue;
-  color: white;
-}
+
+
 #gallery {
   text-align: center;
 }
@@ -697,13 +645,7 @@ Address .city {
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
-#location {
-  text-align: center;
-  margin: 1rem;
-}
-#location img {
-  width: 80%;
-}
+
 
 /* leader board */
 #LeaderBoard {

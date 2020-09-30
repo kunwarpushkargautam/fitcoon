@@ -11,6 +11,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="../sass/landing.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../owl.carousel.css">
     <link rel="stylesheet" href="./gymdetails2.css">
     <link rel="stylesheet" href="../owl.theme.default.css">
@@ -70,14 +71,81 @@
         </div>
 
     </section>
+
+
+    <div id="services">
+        <h1>Our Services</h1><hr>
+        <div class="serviceCard" style="background-image:linear-gradient(-25deg,rgb(251, 255, 0),rgb(0, 204, 255));"><h2>ZYM</h2></div>
+        <div class="serviceCard" style="background-image:linear-gradient(-25deg,rgb(0, 255, 55),rgb(0, 204, 255));"><h2>ZUMBA</h2></div>
+        <div class="serviceCard" style="background-image:linear-gradient(-25deg,rgb(251, 255, 0),rgb(255, 0, 234));"><h2>YOGA</h2></div>
+    </div>
+    <div id="membershipPlan">
+        <h2>Membership Plan</h2><hr>
+        <div style="background-image:linear-gradient(rgb(15, 195, 240),#ffffff);">
+            <h3 style="padding: 0; margin:1rem; font-size: x-large;">SILVER</h3>
+            <h1 >Rs 1799</h1>
+            <p>(per month)</p>
+            <button>JOIN NOW</button>
+        </div>
+        <div style="background-image: linear-gradient(rgb(142, 173, 1),#ffffff);">
+            <h3 style="padding: 0; margin:1rem; font-size: x-large;">GOLD</h3 >
+            <h1 style="color: rgb(255, 255, 255);">Rs 999</h1>
+            <p>(per month)</p>
+            <button>JOIN NOW</button>
+        </div>
+        <div style="background-image:linear-gradient(#6e92c7,lightblue);">
+            <h3 style="padding: 0; margin:1rem; font-size: x-large;">PLATINUM</h3>
+            <h1>Rs 2499</h1>
+            <p>(per month)</p>
+            <button>JOIN NOW</button>
+        </div>
+        <div style="background-image:linear-gradient(#6e92c7,lightblue);">
+            <h3 style="padding: 0; margin:1rem; font-size: x-large;">RUBY</h3>
+            <h1>Rs 2499</h1>
+            <p>(per month)</p>
+            <button>JOIN NOW</button>
+        </div>
+    </div>
+    <div id="gallery">
+        <h1>Gallery</h1><hr>
+     
+          
+               <img src="img/gym.jpg" alt="">
+        
+         
+            <img src="img/gym2.jpg" alt="">
+          
+           
+            <img src="img/newGym.jpg" alt="">
+     
+            
+                <img src="img/gym3.jpg" alt="">
+            
+          
+            <img src="img/gym1.jpg" alt="">
+          
+           
+            <img src="img/gym4.jpg" alt="">
+       
+    </div>
     <section class="gymdetails-content">
         <div class="top">
             <div class="gym-address">
                 <h2>Gym Address</h2><hr>
-                <p>Block 01 , Mahaveer colony,</p>
-                <p> Near Fuel Station,</p>
-                <p>Kanpur City, Uttar Pradesh , India</p>
-                <p>Pin: 887444</p>
+                <div class="address-path">
+
+                    
+                    <p><i class="fa fa-map"></i>&nbsp &nbsp 01 , Mahaveer colony, Near Fuel Station,</p>
+                    
+                    <p>Kanpur City, Uttar Pradesh , India</p>
+                    <p>Pin: 887444</p><br>
+                </div>
+                <div class="address-email ">
+                    <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Officialgym@fitcoon.com"
+                        class="" target="_blank">
+                        <i class="fas fa-envelope  "></i>&nbsp &nbsp Email: <span class="line">Officialgym@fitcoon.com</span></a></p>
+                </div>
+                <a href="" id="check-map">Get Location ></a>
 
             </div>
             <div class="gym-timetable">
@@ -107,6 +175,12 @@
             </div>
         </div>
     </section>
+    <div id="location">
+        <img src="img/location.jpg" alt="">
+    </div>
+   
+
+
 
 
 
@@ -300,7 +374,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="../owl.carousel.js"></script>
+    <script src="../owl.carousel.js"></script> 
+    <script src="js/index.js"></script>
     <script>
 
         $('.owl-carousel').owlCarousel({
