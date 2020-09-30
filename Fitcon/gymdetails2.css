@@ -177,7 +177,7 @@
 .paidmembers,
 .unpaidmembers,
 .expiresoon,
-.gymowner-password-setting {
+.gymowner-profile-setting {
   height: 5rem;
   width: 15rem;
   margin: 2rem 2rem;
@@ -187,7 +187,7 @@
 .paidmembers:hover,
 .unpaidmembers:hover,
 .expiresoon:hover,
-.gymowner-password-setting:hover{
+.gymowner-profile-setting:hover{
   background-color: rgb(190, 190, 190);
 }
 
@@ -196,7 +196,7 @@
 .paidmembers h4,
 .unpaidmembers h5,
 .expiresoon h4,
-.gymowner-password-setting h4{
+.gymowner-profile-setting h4{
 
   margin: 1.5rem 0rem;
 }
@@ -245,7 +245,7 @@ hr {
 .paidmembers,
 .unpaidmembers,
 .expiresoon ,
-.gymowner-password-setting{
+.gymowner-profile-setting{
   height: 5rem;
   width: 15rem;
 
@@ -317,7 +317,7 @@ hr {
 .paidmembers,
 .unpaidmembers,
 .expiresoon,
-.gymowner-password-setting {
+.gymowner-profile-setting {
   width: 13rem;
 
   
@@ -389,7 +389,7 @@ hr {
 .paidmembers,
 .unpaidmembers,
 .expiresoon,
-.gymowner-password-setting {
+.gymowner-profile-setting {
   height: 10rem;
   width: 10rem;
  margin: 1rem 1rem;
@@ -400,7 +400,7 @@ hr {
 .paidmembers h4,
 .unpaidmembers h5,
 .expiresoon h4,
-.gymowner-password-setting h4{
+.gymowner-profile-setting h4{
 
   margin: 3rem 0rem;
 }
@@ -409,7 +409,7 @@ hr {
   font-size: 1.6rem;
 }
 .collection h4 ,
-.gymowner-password-setting h4{
+.gymowner-profile-setting h4{
   padding: 2rem 0px;
   
 }
