@@ -12,7 +12,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="../sass/landing.css">
     <link rel="stylesheet" href="../owl.carousel.css">
-    <link rel="stylesheet" href="./gymdetails2.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/gymDetailAndgymDashboard.css">
     <link rel="stylesheet" href="../owl.theme.default.css">
     <title>Document</title>
 </head>
@@ -56,7 +57,7 @@
         <h3 class="text-center">DashBoard</h3><hr>
         <div class="dash-options">
             <div class="usercontrol  shadow1 ">
-                <a href="" > <h4  class=" ">USER CONTROL</h4></a>
+                <a href="" > <h4  class=" " >USER CONTROL</h4></a>
             </div>
             <div class="collection shadow1 ">
                 <a href=" " > <h4 class=" ">COLLECTION</h4></a>
@@ -71,7 +72,7 @@
                 <a href="" ><h4  class=" ">EXPIRING SOON</h4> </a>
             </div>
             <div class="gymowner-profile-setting shadow1 ">
-               <a href="./gymOwnerProfile.html" ><h4 class=" my-4 ">Profile</h4></a> 
+               <a href="./gymOwnerProfile.html" ><h4>Profile</h4></a> 
             </div>
 
         </div>
@@ -250,69 +251,7 @@
         
 
 
-        const services = document.getElementById('services');
-        const serviceOptions = document.getElementById('serviceOptions');
-
-        services.addEventListener('click', () => {
-            if (serviceOptions.style.display == 'block') {
-                serviceOptions.style.display = 'none';
-            }
-            else {
-                serviceOptions.style.display = 'block';
-            }
-        });
-        if (window.innerWidth > 920) {
-            services.addEventListener('mouseover', () => {
-                serviceOptions.style.display = 'block';
-            });
-        }
-        const IstSearch = document.getElementById('IstSearch');
-        const IIndSearch = document.getElementById('IIndSearch');
-        const IIndSearchOptions = document.getElementById('IIndSearchOptions');
-        const IstSearchOptions = document.getElementById('IstSearchOptions');
-        IstSearch.addEventListener('click', () => {
-            if (IIndSearchOptions.style.display == 'block') {
-                IIndSearchOptions.style.display = 'none';
-            }
-            IstSearchOptions.style.display = 'block';
-
-        });
-        IIndSearch.addEventListener('click', () => {
-            if (IstSearchOptions.style.display == 'block') {
-                IstSearchOptions.style.display = 'none';
-            }
-            IIndSearchOptions.style.display = 'block';
-        });
-        const option1 = document.querySelectorAll('#IstSearchOptions p');
-        for (let i = 0; i < option1.length; i++) {
-            option1[i].addEventListener('click', () => {
-                IstSearch.value = option1[i].textContent;
-                IstSearchOptions.style.display = 'none';
-            })
-        }
-        const option2 = document.querySelectorAll('#IIndSearchOptions p');
-        for (let i = 0; i < option2.length; i++) {
-            option2[i].addEventListener('click', () => {
-                IIndSearch.value = option2[i].innerHTML;
-                IIndSearchOptions.style.display = 'none';
-            })
-        }
-
-        document.addEventListener('click', (e) => {
-            let targetElem = e.target;
-            if ((targetElem != IstSearch) && (targetElem != IIndSearch) && (targetElem != services)) {
-                if (IstSearchOptions.style.display == 'block') {
-                    IstSearchOptions.style.display = 'none';
-                }
-                if (IIndSearchOptions.style.display == 'block') {
-                    IIndSearchOptions.style.display = 'none';
-                }
-                if (serviceOptions.style.display == 'block') {
-                    serviceOptions.style.display = 'none';
-                }
-            }
-        })
-
+      
     </script>
 </body>
 

@@ -33,3 +33,26 @@ $('#branch-carousel').owlCarousel({
       }
     }
   });
+
+  $('#fitnessGoalButton').on('click',()=>{
+    $('#fitnessModal').fadeIn();
+    $('#fitnessModalTopContainer').fadeIn();
+    $('body').css('overflowY','hidden');
+  })
+  $('#fitnessModal .close').on('click',()=>{
+    $('#fitnessModal').fadeOut();
+    $('#fitnessModalTopContainer').fadeOut();
+    $('body').css('overflowY','visible');
+  })
+
+  $('#changePasswordButton').on('click',()=>{
+    $('#changePasswordModal').fadeIn();
+    $('#changePasswordModalTopContainer').fadeIn();
+    $('body').css('overflowY','hidden');
+  })
+  $('#changePasswordModal .close').on('click',()=>{
+    $('#changePasswordModal').fadeOut();
+    $('#changePasswordModalTopContainer').fadeOut();
+    $('body').css('overflowY','visible');
+  })
+

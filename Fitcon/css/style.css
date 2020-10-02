@@ -27,6 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  z-index: 999;
 }
 header a:hover {
   opacity: 0.7;
@@ -46,7 +47,7 @@ a#leftPart {
   display: none;
   margin-right: 1rem;
   /* border: 3px solid black; */
-  /* border-radius: 100%; */
+  border-radius: 100%;
   padding-top: 0.26rem;
   padding-bottom: 0.26rem;
 }
@@ -55,14 +56,14 @@ a#leftPart {
   width: 25px;
   height: 2px;
   background-color: black;
-  margin: 0.2rem;
+  margin: 0.3rem;
 }
 #close {
   float: right;
   margin-right: 1rem;
   border: 2px solid black;
   cursor: pointer;
-  padding: 0.1rem 0.5rem;
+  padding: 0.1rem 0.55rem;
   margin-top: 1rem;
   font-size: 1.5rem;
   border-radius: 100%;
@@ -90,6 +91,10 @@ a#leftPart {
 #rightPartMobile a p {
   margin: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.container-center h1{
+    justify-content: center;
+    text-align: center;
 }
 #search-section {
   padding: 1.2rem;
@@ -167,6 +172,10 @@ Address .city {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.thodaupar{
+    margin-top: -2rem;
+
+}
 .branchCard {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -237,6 +246,7 @@ Address .city {
   flex-wrap: wrap;
 }
 #activity .row .col1,
+#fitMitrCardContainer div,
 #activity .row .col2,
 #activity .row .col3 {
   text-align: center;
@@ -247,7 +257,8 @@ Address .city {
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 #activity .row .col1,
-#activity .row .col3 {
+#activity .row .col3,
+#fitMitrCardContainer div {
   width: 16rem;
 }
 #activity .row .col1 img {
@@ -327,30 +338,195 @@ Address .city {
 #activity .row .col1 div {
   background-color: crimson;
   margin: 0.5rem;
-  padding: 0.7rem 1rem;
   border-radius: 15px;
   color: white;
   box-shadow: 4px 2px 3px -1px lightblue;
 }
-
-#activity .row .col2 div {
-  margin: 3%;
-  display: inline-block;
-  background-color: crimson;
-  width: 9%;
-  writing-mode: vertical-lr;
-  padding-bottom: 2rem;
-  padding-top: 0.5rem;
-  color: transparent;
-  animation: showHide 0.5s infinite;
-  font-weight: bolder;
+#activity .row .col1 div:last-child {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+  margin: auto;
+}
+#activity .row .col1 div:last-child h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+#activity .row .col1 div:last-child p {
+  margin: 0.2rem;
+  font-size: 1.1rem;
+  color: #036;
+}
+#activity .row .col1 div button {
+  background-color: transparent;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#activity .row .col1 div button:hover {
+  color: yellow;
 }
 
-@keyframes showHide {
+#activity .row .col2 .BarContainer {
+  background-image: linear-gradient(to right, black, white);
+  overflow: hidden;
+  width: 12%;
+  position: relative;
+  margin: 1rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+#activity .row .col2 .tag {
+  color: darkblue;
+  padding: 0.2rem 0.2rem;
+  width: 12%;
+  font-size: 0.7rem;
+  display: inline-block;
+  font-weight: bolder;
+  margin: 1rem;
+  margin-top: 0;
+}
+#activity .row .col2 .BarContainer .progressBar {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to top, black, white);
+  color: white;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+#activity .row .col2 .BarContainer:hover .progressBar {
+  animation: progress 1s ease;
+  height: 100%;
+  color: orangered;
+}
+#activity .row .col2 .BarContainer:hover {
+  background-image: none;
+}
+#reviewByGymOwner {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#reviewByGymOwner p {
+  margin: auto;
+  width: 65%;
+}
+
+#fitMitr {
+  text-align: center;
+  margin: 1rem;
+}
+#fitMitr h1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+}
+#fitMitrCardContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#fitMitrCardContainer div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  float: left;
+}
+
+@keyframes progress {
+  0% {
+    height: 0;
+  }
   100% {
-    color: white;
+    height: 100%;
+    color: orangered;
   }
 }
+#fitnessModalTopContainer,
+#changePasswordModalTopContainer,
+#customerReviwTopContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.14);
+  top: 0;
+  z-index: 1200;
+  display: none;
+}
+#fitnessModal,
+#changePasswordModal,
+#customerReviwModal {
+  position: fixed;
+  z-index: 100000;
+  top: 3rem;
+  width: 13rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  display: none;
+}
+#fitnessModal label {
+  font-size: 1.3rem;
+  padding-left: 1rem;
+}
+#changePasswordModal input {
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+
+  height: 1.8rem;
+  margin: 0.3rem 0;
+}
+#changePasswordModal input::placeholder {
+  padding-left: 0.3rem;
+}
+#fitnessModal button,
+#changePasswordModal button,
+#customerReviwModal button {
+  margin-top: 1rem;
+  padding: 0.4rem 2rem;
+  border: none;
+  color: white;
+  border: 2px solid red;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+#customerReviwModal textarea {
+  resize: none;
+}
+#fitnessModal button:hover,
+#changePasswordModal button:hover,
+#customerReviwModal button:hover {
+  background-color: darkblue;
+}
+#fitnessModal .close,
+#changePasswordModal .close,
+#customerReviwModal .close {
+  position: absolute;
+  top: -1rem;
+  right: 0.5rem;
+  transform: rotate(45deg);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#activity .row .col2 hr {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 0.3rem;
+  height: 1px;
+
+  background-color: black;
+}
+
 #activity .subCard {
   background-color: white;
   color: black;
@@ -382,17 +558,19 @@ Address .city {
   font-weight: bolder;
 }
 #activity #scoreBoard {
-  background-image: linear-gradient(to bottom, white 20%, lightblue 80%);
+  background-color: rgba(0, 0, 0, 0.12);
+  height: 21rem;
+  padding-bottom: 4rem;
+  color: red;
 }
 
 /* profule section */
 #profile-section,
 #gym-profile-section {
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  padding: 1.3rem 1rem;
-  margin: 1rem;
-  margin-top: 5.5rem;
+  /* padding:1.3rem 1rem; */
+  /* margin:1rem; */
+  margin-top: 4.6rem;
+
   border-radius: 15px;
   text-align: center;
 }
@@ -403,32 +581,147 @@ Address .city {
   font-size: 1.5rem;
 }
 #gym-profile-section img {
-  width: 70%;
+  width: 80%;
+  object-fit: cover;
+  position: relative;
   height: 20rem;
   display: block;
   margin: auto;
   margin-bottom: 0.53rem;
-  /* object-fit: contain; */
+  z-index: 1;
+}
+#gym-profile-section #changeGymIcon {
+  color: rgb(0, 0, 0);
+  
+  right: 10%;
+  /* float: right; */
+  margin-top: -3rem;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  z-index:700;
+
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.fa-pencil-square-o:before {
+  content: "\f044";
+
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+#ownerlogo {
+  position: relative;
+  display: flex;
+  box-shadow: 0px 8px 20px rgb(110, 110, 110);
+  height: 10rem;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -8rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  border: solid 5px white;
+  z-index: 700;
+}
+
+.gymownericonedit {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+.gymownericonedit #changeGymLogo {
+  display: flex;
+  justify-content: center;
+  
+  margin-left: 4rem;
+  margin-top: 5px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+
+  border: solid 2px whitesmoke;
+  box-shadow: 1px 1px 10px ;
+  border-radius: 50px;
+  z-index: 700;
+
+  /* padding: 0.3rem 0.5rem; */
+  cursor: pointer;
+}
+.gymownericonedit #changeGymLogo .fa-pencil-square-o:before {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  padding: 1px 2px;
+}
+.gymownericonedit #changeGymLogo p {
+  font-size: .7rem;
+  color: #000000;
+  font-weight: 700;
+  padding: 1px;
+  margin: 4px 1px;
 }
 #gym-profile-section textarea {
   resize: none;
   width: 98%;
 }
+.userprofiletoppart{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+}
+.userprofiles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 5%;
+}
+#profile-section button {
+    /* background-color: transparent; */
+    border-radius: 15px;
+    
+}
+#profile-section #changeIcon .fa-pencil-square-o:before{
+    /* color: white; */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 #profile-section img {
-  width: 9rem;
-  height: 9rem;
+  width: 50%;
+  height: 10%;
   border: 5px solid white;
-  border-radius: 100%;
-  display: block;
+  /* border-radius: 100%; */
+  /* display: block; */
   margin: auto;
   margin-bottom: 0.53rem;
+  margin-left: calc(50%-5rem);
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
+#profile-section #edit {
+    
+    border: none;
+    
+    width: 4.5rem;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    
+    box-shadow: 0px 0px 10px;
+    margin: 1rem;
+    margin-left: 72%;
+  }
 #personal-details,
 #gym-details {
   margin-top: 1rem;
-  width: 90%;
+  width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
   text-align: left;
@@ -462,19 +755,19 @@ Address .city {
   color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 #profile-section #changeIcon,
-#gym-profile-section #changeGymIcon {
+#gym-profile-section #changeGymLogo {
   color: white;
-  margin-top: 0.5rem;
-  background-color: black;
+  margin-left: 45%;
+  /* background-color: black; */
   border: none;
-  border-radius: 13px;
+  /* border-radius: 13px; */
   padding: 0.3rem 0.5rem;
   cursor: pointer;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
-#profile-section #edit,
 #gym-profile-section button {
   border: none;
   border-radius: 15px;
@@ -484,6 +777,7 @@ Address .city {
   cursor: pointer;
   float: right;
 }
+
 #gym-profile-section button {
   float: none;
 }
@@ -537,19 +831,19 @@ Address .city {
 }
 #editModal #editForm input {
   background-color: white;
-  margin: 1rem 1%;
-  width: 18em;
-  padding-left: 0.5rem;
+  margin: 0.8rem 1%;
+  width: 17rem;
+  /* padding-left: 0.5rem; */
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   padding: 0.5rem;
-  border-radius: 12px;
+  /* border-radius:12px ; */
   color: rgba(0, 0, 0, 0.7);
   border: none;
 }
 #editModal #editForm label {
   font-size: 1rem;
-  margin: 1rem 0.5rem;
+  margin: 1rem 00rem;
 }
 #editModal #editForm button {
   display: block;
@@ -564,19 +858,19 @@ Address .city {
 #editModal #editForm select {
   background-color: white;
   margin: 1rem 1%;
-  width: 19em;
+  width: 9em;
   padding-left: 0.5rem;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   padding: 0.5rem;
-  border-radius: 12px;
+
   color: rgba(0, 0, 0, 0.7);
   border: none;
 }
 #editModal #editForm textarea {
   background-color: white;
   margin: 1rem 1%;
-  width: 19em;
+  width: 90%;
   padding-left: 0.5rem;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -593,60 +887,294 @@ Address .city {
   position: relative;
 }
 #gymDetail #gymRating {
-  color: red;
+  color: orange;
+  font-size: 1rem;
+  text-align: right;
 }
 
 #gymDetail h1 {
   position: relative;
-  top: 80%;
-  padding: 1rem;
-  font-size: 1.7rem;
+  top: 77.8%;
+  padding: 0.2rem 0.3rem 2rem 2rem;
+  font-size: 2.3rem;
   overflow: hidden;
   display: block;
   margin-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(to right, rgb(113, 113, 235), cyan);
   text-align: center;
-  color: brown;
+  color: white;
 }
+
+#gymDetail span img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 4px solid white;
+  position: absolute;
+  left: 1rem;
+  bottom: -0.7rem;
+  z-index: 100;
+  animation: animateGymLogo 0.9s infinite linear;
+}
+@keyframes animateGymLogo {
+  0% {
+    border-top-color: cyan;
+    border-left-color: cyan;
+  }
+  25% {
+    border-top-color: cyan;
+    border-left-color: white;
+    border-right-color: cyan;
+    border-bottom-color: white;
+  }
+  50% {
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: cyan;
+    border-bottom-color: cyan;
+  }
+  75% {
+    border-top-color: white;
+    border-left-color: cyan;
+    border-right-color: white;
+    border-bottom-color: cyan;
+  }
+  100% {
+    border-top-color: cyan;
+    border-left-color: cyan;
+    border-right-color: white;
+    border-bottom-color: white;
+  }
+}
+
 #gymAddress {
+  width: 40%;
   margin: 1rem;
-  margin-top: 0;
   padding: 2rem;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+  padding-top: 1rem;
+  border-radius: 15px;
+  display: inline-block;
+
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 #gymAddress h3 {
+  font-size: 2rem;
   margin: 0.5rem;
 }
-#gymStatus {
-  font-size: 1.7rem;
-  text-align: center;
+#gymAddress p {
+  font-size: 1.3rem;
+}
+#openDetail h1 {
+  font-size: 2rem;
+  margin-top: 0;
   font-weight: bolder;
   text-align: center;
   color: green;
+  cursor: pointer;
+}
+#gymAddressandOpenContainer {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+#openDetail {
+  padding: 1rem 1rem;
+  width: 40%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#openDetail p span:first-child {
+  float: left;
+  margin-right: 2rem;
+  font-weight: bolder;
+}
+#openDetail p span:last-child {
+  float: right;
+  font-weight: bolder;
 }
 
-/* services section */
+#openCloseDayTime {
+  background-image:linear-gradient(#fafc91,#d4c600) ;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 25%;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  display: inline-block;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  padding: 01rem;
+  border-radius: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.timerow{
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    
+}
+.timerow select,.timerow input{
+    margin: 1px 3%;
+    border-radius: 10px;
+    width: 28%;
+    height: 1.7rem;
+    cursor: pointer;
+    
+}
+.timerow input{
+    border-color:transparent;
+}
+.gownerupdate {
+    justify-content: center;
+    text-align: center;
+    
+}
+.gownerupdate button{
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    border-color: transparent;
+    box-shadow: 0px 0px 10px  #000000;
+    background-color: rgb(12, 102, 238);
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    
+}
+.gownerupdate button:hover{
+    background-color: rgb(30, 43, 32);
+    color: rgb(255, 255, 255);
+    
+}
 
+#openCloseDayTime h3 {
+  color: black;
+}
+#openCloseDayTime label {
+  color: black;
+  font-weight: bolder;
+}
+#payPerWorkout {
+  margin: 0;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
 
+  border-bottom: 2px solid white;
+}
+#payPerWorkout h1 {
+  margin: 0.3rem;
+  color: yellow;
+}
+#payPerWorkout h2 span {
+  color: red;
+}
+#payPerWorkout button {
+  border: 2px solid blue;
+  border-radius: 15px;
+  color: black;
+  font-size: 1.8rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+#payPerWorkout button:hover {
+  background-color: blue;
+  color: white;
+}
 
 #gallery {
   text-align: center;
 }
 
 #gallery img {
-  width: 10rem;
-  height: 10rem;
-  margin: 1rem;
+  width: 17rem;
+  height: 17rem;
+  margin: 2rem;
   border: 2px solid white;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
+#location {
+  text-align: center;
+  margin: 1rem;
+}
+#location img {
+  width: 80%;
+}
 
+#gymReview {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: auto;
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
 
+#gymReview form {
+  display: none;
+}
+#gymReview textarea {
+  min-width: 80%;
+  max-width: 80%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+#gymReviewRating span,
+#userReviewRating span {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#gymReview button,
+#reviewButton {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#reviewButtonContainer {
+  width: 80%;
+  margin: auto;
+}
+#reviewButtonContainer #reviewButton {
+  border-radius: 0;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+#availableGymReviews {
+  max-height: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#availableGymReviews div {
+  text-align: left;
+  padding-left: 2rem;
+}
+#availableGymReviews img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  float: left;
+}
+#availableGymReviews h4 {
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+}
 /* leader board */
 #LeaderBoard {
   height: 100vh;
@@ -736,30 +1264,15 @@ td {
 }
 /* user control */
 #userControl {
-  margin-top: 3.9rem;
-  margin: 2rem;
+  margin: 2rem 0;
+  margin-top: 3rem;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
-#userControl div {
-  position: relative;
+#userControl::-webkit-scrollbar {
+  display: none;
 }
-#userControl div h2 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1.5rem;
-  margin: 0;
-  font-size: 1.7rem;
-  color: brown;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-#userControl div img {
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 15rem;
-}
+
 #customerInfoSearch {
   margin-top: 1rem;
   display: flex;
@@ -770,71 +1283,82 @@ td {
   margin: 0.5rem;
   font-size: 2rem;
 }
-#customerInfoSearch span:nth-child(2) input {
-  margin: 0.5rem;
-  height: 2rem;
-  border: none;
-  width: 15rem;
-  border-radius: 13px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.14), -2px -2px 6px rgba(0, 0, 0, 0.14);
-}
-#customerInfoSearch span:nth-child(2) input::placeholder {
-  padding-left: 1rem;
-}
+
 #customers {
-  overflow-x: scroll;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
-#customers::-webkit-scrollbar {
+
+#searchByNameOrId {
+  height: 2rem;
+  background-color: yellow;
+}
+#customers .member {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 1rem;
+  min-width: 250px;
+  margin: 0.3rem;
+}
+
+#customers .member div {
+  margin-top: 0.5rem;
+}
+#customers .member div button {
+  background-color: blue;
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  margin: 0.2rem;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#customers .member div.moreInfo {
   display: none;
 }
-#customers table {
-  border: 0.1rem solid black;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.12);
-  background-color: white;
-  text-align: center;
-  margin: auto;
-  border-spacing: 0;
-  color: black;
-  margin-top: 1rem;
+#customers .member div.activeMoreInfo {
+  display: block;
 }
-#customers table th,
-td {
-  width: 12.5rem;
-}
-#customers table thead th {
-  background-color: #036;
-  color: white;
-  padding: 0.5rem;
-}
-#customers tr:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-#customers table tbody td button {
-  border: none;
-  border-radius: 12px;
-  color: white;
-  padding: 0.5rem 0.8rem;
-  background-color: orange;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.12);
+#customers .member .moreButton {
   cursor: pointer;
+  color: blue;
 }
-#customers table tbody td button:hover {
-  opacity: 0.8;
+#customers .member img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px solid #036;
+  float: left;
+  margin-right: 1rem;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
-#addCustomer button {
-  margin: 0.5rem;
-  margin-bottom: 0;
-  padding: 0.8rem 1rem;
+#customers .member p span:first-child {
+  float: left;
+  color: blue;
+}
+#customers .member p span:last-child {
+  float: right;
+}
+
+#memberSearchContainer input {
+  height: 2rem;
+  border-radius: 15px;
+  padding-left: 1rem;
+  width: 14rem;
+  border: 2px solid yellow;
+  background-color: transparent;
   color: white;
-  background-color: black;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
 }
-#addCustomer button:hover {
-  opacity: 0.7;
+#memberSearchContainer input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
+
 @media screen and (max-width: 535px) {
   #search-section span {
     display: none;
@@ -845,9 +1369,106 @@ td {
   #activity .row .col2 table tr {
     font-size: 0.8rem;
   }
-  #activity .row .col2 div {
-    margin: 2%;
-    width: 12%;
+  #activity #scoreBoard {
+    height: 13rem;
+  }
+  #activity .row .col2 .tag {
+    background-color: transparent;
+    color: darkblue;
+  }
+  #activity .row .col2 .BarContainer {
+    width: 19%;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
+  #gymDetail span img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4rem;
+  }
+  #editModal #editTopContainer {
+    width: 80%;
+  }
+  #editModal #editForm {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+  #editModal #editForm textarea {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+
+  #editModal #editForm input {
+    width: 100%;
+    /* margin: 1rem 1rem; */
+  }
+  form {
+    width: 80%;
+    margin-right: 1.5rem;
+  }
+  #personal-details div {
+    width: 90%;
+}
+#gym-details div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem 2px;
+    justify-content: center;
+
+  }
+  #profile-section #changeIcon{
+      /* margin-right: 5%; */
+      margin-left: 85%;
+      
+  }
+  #openCloseDayTime {
+    
+    margin-left: 9%;
+    margin-right: 4%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    
+    padding: 0.5rem;
+    
+    color: #000000b3;
+  }
+  #openCloseDayTime select{
+      padding: 2px 2px;
+  }
+  #profile-section img{
+    height: 10rem;
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+  }
+
+  #gym-details div h4{
+      margin:auto;
+      padding: .3rem 0px 0.5rem;
+      font-size: 1.5rem; 
+  }
+  #gym-details div input{
+      width: 80%;
+      margin:auto;
+  }
+  #gym-profile-section img{
+      width: 100%;
+      height: 14rem;
+  }
+}
+@media screen and (max-width: 662px) {
+  #gymAddress {
+    width: 90%;
+  }
+  #openDetail {
+    width: 90%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -857,45 +1478,13 @@ td {
   #Mobilemenu {
     display: block;
   }
+
+  /* #personal-details div{
+        width: 60%;
+    } */
   #search-section div input {
     width: 20rem;
   }
-  #gym-details div input {
-    width: 90%;
-  }
-  #profile-section,
-  #gym-profile-section {
-    padding: 0rem 0rem;
-    margin: 0rem;
-
-    border-radius: 0px;
-  }
-  #personal-details div,
-  #gym-details div {
-    width: 100%;
-  }
-  #gym-profile-section button {
-    margin: 1rem;
-
-    background-color: #0ffdd688;
-    color: black;
-    font-size: 1.5rem;
-    box-shadow: 0px 2px 9px rgb(63, 63, 63);
-  }
-  #gym-profile-section button:hover{
-    background-color: #1057f1;
-    color: white;
-    
-  }
-  
-  #gym-profile-section{
-  
-  padding: 3rem 0rem;}
-
-  #gym-profile-section img {
-    width: 90%;
-    height: 40%;
-  padding: 0rem 0rem;}
 }
 @media screen and (max-width: 1100px) {
   #activity .row .col3 {
@@ -905,6 +1494,16 @@ td {
 @media screen and (max-width: 800px) {
   #activity .row .col1 {
     width: 100%;
+  }
+
+  #search-section div input {
+    width: 20rem;
+  }
+  /* #personal-details div{
+        width: 60%;
+    } */
+  #editModal #editForm label {
+    margin: 0px;
   }
 }
 @media screen and (min-width: 330px) and (max-width: 417px) {

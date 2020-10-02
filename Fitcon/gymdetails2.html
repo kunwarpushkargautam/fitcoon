@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../sass/landing.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../owl.carousel.css">
-    <link rel="stylesheet" href="./gymdetails2.css">
+    <link rel="stylesheet" href="css/gymDetailAndgymDashboard.css">
     <link rel="stylesheet" href="../owl.theme.default.css">
     <title>Document</title>
 </head>
@@ -180,7 +180,61 @@
     </div>
    
 
-
+    <div id="reviewButtonContainer"><button id="reviewButton">Add Review now</button></div>
+    <div id="gymReview">
+      
+        <form action="" id="reviewGymForm">
+            <textarea name="" id="" cols="30" rows="10" placeholder=" write your comment here..."></textarea>
+            <br>
+            <span id="gymReviewRating">
+               <span>☆</span>
+               <span>☆</span>
+               <span>☆</span>
+               <span>☆</span>
+               <span>☆</span>
+            </span>
+            <button>Submit</button>
+        </form>
+        <hr>
+        <div id="availableGymReviews">
+            <div>
+                <img src="img/gymOwner.jpg"  alt="">
+                 <h4>pushker gautam </h4> <br>
+                 <p>
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                 </p>
+                 <p>⭐⭐⭐⭐</p>
+            </div>
+            <div>
+                <img src="img/gymOwner.jpg"  alt="">
+                 <h4>pushker gautam </h4> <br>
+                 <p>
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                 </p>
+                 <p>⭐⭐⭐⭐</p>
+            </div>
+            <div>
+                <img src="img/gymOwner.jpg"  alt="">
+                 <h4>pushker gautam </h4> <br>
+                 <p>
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                    such a good gym in raipur
+                 </p>
+                 <p>⭐⭐⭐⭐</p>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -375,7 +429,10 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="../owl.carousel.js"></script> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/gymDetail.js"></script>
     <script>
 
         $('.owl-carousel').owlCarousel({
@@ -420,47 +477,11 @@
                 serviceOptions.style.display = 'block';
             });
         }
-        const IstSearch = document.getElementById('IstSearch');
-        const IIndSearch = document.getElementById('IIndSearch');
-        const IIndSearchOptions = document.getElementById('IIndSearchOptions');
-        const IstSearchOptions = document.getElementById('IstSearchOptions');
-        IstSearch.addEventListener('click', () => {
-            if (IIndSearchOptions.style.display == 'block') {
-                IIndSearchOptions.style.display = 'none';
-            }
-            IstSearchOptions.style.display = 'block';
-
-        });
-        IIndSearch.addEventListener('click', () => {
-            if (IstSearchOptions.style.display == 'block') {
-                IstSearchOptions.style.display = 'none';
-            }
-            IIndSearchOptions.style.display = 'block';
-        });
-        const option1 = document.querySelectorAll('#IstSearchOptions p');
-        for (let i = 0; i < option1.length; i++) {
-            option1[i].addEventListener('click', () => {
-                IstSearch.value = option1[i].textContent;
-                IstSearchOptions.style.display = 'none';
-            })
-        }
-        const option2 = document.querySelectorAll('#IIndSearchOptions p');
-        for (let i = 0; i < option2.length; i++) {
-            option2[i].addEventListener('click', () => {
-                IIndSearch.value = option2[i].innerHTML;
-                IIndSearchOptions.style.display = 'none';
-            })
-        }
-
+       
         document.addEventListener('click', (e) => {
             let targetElem = e.target;
-            if ((targetElem != IstSearch) && (targetElem != IIndSearch) && (targetElem != services)) {
-                if (IstSearchOptions.style.display == 'block') {
-                    IstSearchOptions.style.display = 'none';
-                }
-                if (IIndSearchOptions.style.display == 'block') {
-                    IIndSearchOptions.style.display = 'none';
-                }
+            if ((targetElem != services)) {
+                
                 if (serviceOptions.style.display == 'block') {
                     serviceOptions.style.display = 'none';
                 }
