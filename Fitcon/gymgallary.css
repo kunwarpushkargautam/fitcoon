@@ -10,3 +10,20 @@
     .card{
         margin: 0.5rem;
     }
+}
+@media(max-width: 360px){
+    html{
+        font-size: 55%;
+    }
+    .card{
+        margin: 0.5rem;
+    }
+}
+@media(max-width: 280px){
+    html{
+        font-size: 45%;
+    }
+    .card{
+        margin: 0.5rem;
+    }
+}
